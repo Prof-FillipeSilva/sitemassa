@@ -1,0 +1,189 @@
+/* GERAL */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe6f0, #ffd6eb);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #880e4f;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* TELA DE LOGIN */
+.login-screen {
+  position: relative;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #fff;
+  z-index: 2;
+  color: white;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Estrelas */
+.stars, .stars2, .stars3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png') repeat top center;
+  animation: moveStars 100s linear infinite;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.stars2 {
+  background-size: contain;
+  animation: moveStars 200s linear infinite;
+  opacity: 0.2;
+}
+
+.stars3 {
+  background-size: cover;
+  animation: moveStars 300s linear infinite;
+  opacity: 0.1;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+/* Corações subindo */
+.floating-heart {
+  position: absolute;
+  color: #ff4d88;
+  animation: floatUp 5s linear infinite;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    bottom: 0;
+    opacity: 0;
+    transform: translateX(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+/* Entrada
+#entrada {
+  min-height: 100vh;
+  background: #fff0f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+} */
+
+#entrada {
+  position: relative;
+  height: 100vh;
+  background-image: url('../site/img/fundo.jpg'); /* coloque o nome da sua imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#entrada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* camada suave por cima do fundo */
+  z-index: 0;
+}
+
+#entrada > * {
+  position: relative;
+  z-index: 1;
+}
+
+.photo {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 5px solid #ffb6c1;
+  box-shadow: 0 0 20px #ff99c8;
+}
+
+.heart {
+  font-size: 5rem;
+  color: #ff4d88;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.btn-pink {
+  background-color: #ff4d88;
+  color: white;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #d9366d;
+}
+
+.audio-player {
+  margin-top: 2rem;
+}
+
+.audio-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#poema1 p {
+  align-items: center;
+  text-align: left;
+  color: #d9366d; /* ou ajuste conforme o fundo */
+}
+
+#poema2 p {
+  text-align: left;
+  color: #d9366d; /* ou ajuste conforme o fundo */
+}
+
+
+
