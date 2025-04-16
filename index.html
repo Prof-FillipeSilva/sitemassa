@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sem rótulos ❤️</title>
+  
+    <!-- Favicon símbolo de proibido -->
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f6ab.png" type="image/png" />
+  
+    <!-- Seus links de CSS, Bootstrap, animações etc. entram aqui -->
+  
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Estilo Personalizado -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+  <!-- TELA DE LOGIN COM SENHA -->
+  <section id="loginScreen" class="login-screen">
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+    <div class="login-box text-center animate__animated animate__fadeInDown">
+      <h2 class="mb-4">💫 Digite a senha 💫</h2>
+      <input type="password" id="senha" class="form-control mb-3" placeholder="Digite a senha...">
+      <button class="btn btn-light" onclick="verificarSenha()">Entrar</button>
+      <p id="erro" class="text-danger mt-3"></p>
+    </div>
+    <div id="hearts-container-login"></div>
+  </section>
+
+  <!-- TELA DE INTRODUÇÃO -->
+  <section id="entrada" class="hidden animate__animated">
+    <img src="../site/img/perfil.jpg" alt="Foto" class="photo animate__animated animate__zoomIn">
+    <h1 class="mt-3 animate__animated animate__fadeInDown">❤️ Para uma pessoa especial (sem rótulos) ❤️</h1>
+    <div class="heart my-3 animate__animated animate__pulse">💖</div>
+    <button class="btn btn-pink btn-lg animate__animated animate__bounceIn" onclick="entrarSite()">Clique para a surpresa - Bobona 😌</button>
+    <div id="hearts-container"></div>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <section id="mainContent" class="container text-center hidden animate__animated">
+    <h2 class="mb-4">Para Izabelle...</h2>
+    <p class="lead">Longe de mim querer confundir sua cabeça ou deixar ainda mais maluca sua rotina, mas tenta levar isso com o maior equilíbrio que conseguir kkk (se é que tem como). Não consigo entender nunca o que aconteceu por aqui, e se eu não canalizasse isso em algum lugar, ia explodir, e olha que não faz nem um mês dessa loucura toda kkk. Não sei direito o que tenho por aqui, não sei também o que guarda por aí, você sabe da minha situação: pessoal e profissional, até mais que muitas pessoas próximas, me conheceu e me entendeu mais do que pessoas que conheço há anos, e não consigo explicar essa conexão, que nunca tive com ninguém, de fato. Sempre tive dificuldades com o sentir, você sabe, e acho que isso me segue ainda hoje, como uma sombra, via decisões, escolhas e rotina, de modo geral, e é algo que venho tentando mudar, sobretudo, na parte de expor isso, ainda é bem difícil, mas contigo encontrei facilidade e leveza, e isso é inexplicável.<br>
+    Você é luz, é linda e única, sua autoestima e o brilho que você tem, não só nos olhos azuis, mas nos escândalos, manias e tudo mais, enfim, eu vejo um futuro brilhante na sua vida, a farda te encontrará bem kkk, se for isso que deseja, é claro, e eu verei isso, não sei se de perto, de longe ou por uma tela de celular, mas com seu esforço você irá conquistar o mundo e o que quiser, e te desejo sorte e uma pitada de sabedoria, porque pensa como é difícil saber o que a gente deseja mesmo, tipo para a vida, sabe, o que a gente quer para sempre (se é que isso existe). Nesse período de tempo que estarei por aqui, por todas as circunstâncias envolvidas, ainda te vejo como passageira kkk, mas espero que seja a passageira mais amada que passe por aqui, não é rotulando, tá kkkkk, e que você perceba isso nunca aceite menos de ninguém, porque é difícil não falar com você sobre tudo um pouco, ver você de dia e saber que até na hora de dormir, preciso estar sabendo como você está, de um papo legal, nem que seja ver você falando dos seus contatinhos kkkk, e depois ainda te encontrar nas músicas, lugares e sabores, e agora mais uma novidade, sonhos kkkk, aff, que clichê, e no mesmo dia que eu kkkk. O impasse mais terrível e mais bonito da minha vida, talvez isso tudo aqui também seja só um adeus, para tudo isso, e um gatilho para utilizar de resiliência para seguir, para aplicar a música “vive” sem questionar, e sem se perguntar o que o destino ainda almeja com essa loucura toda kkk, sem levantar nenhum “e se”, e continuar seguindo. Te trouxe aqui 2 poemas, uma playlist “arrumadinha”, pra combinar kkkk, muitoooo rosa, e um espaço onde você poderá escrever qualquer coisa que quiser e a qualquer hora também, algumas coisas preciso ouvir de você, e assim que enviar, se quiser, elas também me encontrarão.<br><br>
+      De uma pessoa especial...<br>
+      PS: Sem nomes e sem rótulos!</p>
+
+    <div class="my-4">
+      <button class="btn btn-outline-pink btn-pink m-2" onclick="mostrarPoema(1)">Poema - Impasse</button>
+      <!-- <button class="btn btn-outline-pink btn-pink m-2" onclick="mostrarPoema(2)">Poema 2</button> -->
+    </div>
+
+    <div id="poema1" class="hidden animate__animated">
+      
+      <p class="mt-3">
+        Mesmo assim, sem entender<br>
+        Viajei do céu ao inferno<br>
+        Tudo isso então se deu<br>
+        Ao findar o mês eterno<br><br>
+        
+        Presente, presença, pretexto<br>
+        Presepadas, risadas<br>
+        Uma brecha não prevista<br>
+        Uma muralha abalada<br>
+        Um apego coibido<br>
+        Uma lâmina quebrada<br><br>
+        
+        Duas linhas que não cruzam<br>
+        Foram criadas pelo impasse<br>
+        Sentimentos e palavras retidos<br>
+        Antes que a língua queimasse<br><br>
+        
+        Eu não sei se é o início, meio ou fim<br>
+        Não sei se está perto, longe ou em mim<br>
+        Só sei, que ainda está passando por aqui<br>
+        E não tenho nem ideia de como fazer sair<br><br>
+        
+        Tentando saber o que aconteceu<br>
+        Me vejo num caminho sem direção<br>
+        Se esconder, se afastar? Não!<br>
+        Distância não apaga conexão<br><br>
+        
+        Caso concreto, frio e lento<br>
+        Mexe com o dado imutável<br>
+        O todo poderoso tempo<br><br>
+        
+        Que vai de zero a cem tão rápido<br>
+        E quem tentou controla-lo, falhou<br>
+        Mas traz conforto em si mesmo<br>
+        Pois sempre que choveu, parou
+        </p>
+    </div>
+
+    <!-- <div id="poema2" class="hidden animate__animated">
+      <p class="mt-3">Nos teus olhos vejo o céu brilhar,<br>E em teu toque, consigo flutuar.<br>O tempo passa, mas não muda o que sinto,<br>Te amar é meu presente mais bonito.</p>
+    </div> -->
+
+    <div class="audio-player">
+      <audio id="player" controls autoplay loop>
+        <source id="source" src="../site/audio/thinking.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+      <div class="audio-controls">
+        <button class="btn btn-pink" onclick="musicaAnterior()">⏮️ Anterior</button>
+        <button class="btn btn-pink" onclick="proximaMusica()">⏭️ Próxima</button>
+      </div>
+    </div>
+  </section>
+
+<!-- ESCREVA-ME ALGO -->
+<section id="mensagem" class="container my-5 text-center animate__animated hidden">
+  <h2 class="mb-4">Escreva-me algo...</h2>
+  <form id="form-recado" class="mx-auto" style="max-width: 600px;">
+    <textarea name="mensagem" rows="6" class="form-control mb-3" placeholder="Escreva aqui com carinho..." required></textarea>
+    <button type="submit" class="btn btn-pink btn-lg">Enviar 💌</button>
+  </form>
+
+  <!-- Mensagem de confirmação oculta -->
+  <div id="mensagem-enviada" class="mt-4 text-success fw-bold" style="display: none;">
+    💌 Seu recado foi enviado com sucesso! Obrigada!
+  </div>
+</section>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
